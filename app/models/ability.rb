@@ -5,7 +5,7 @@ class Ability
 
     # nil guard as per http://www.sitepoint.com/cancancan-rails-authorization-dance/
     user ||= User.new
-    
+
     if user.role?(:admin)
       can :manage, :all
     elsif user.role?(:moderator)
