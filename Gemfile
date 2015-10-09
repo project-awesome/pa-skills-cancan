@@ -42,4 +42,6 @@ gem 'spring',        group: :development
 
 gem 'jquery-turbolinks'
 
+gem 'cancancan', '~> 1.10'
+
 

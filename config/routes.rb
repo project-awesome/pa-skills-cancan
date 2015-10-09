@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:update]
 
+  resources :projects
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

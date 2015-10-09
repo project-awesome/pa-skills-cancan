@@ -14,8 +14,15 @@
       <%= link_to 'iCan', root_path, class: 'navbar-brand' %>
     </div>
     <div id="navbar">
+      <!-- <ul class="nav navbar-nav">
+           </ul> -->
+
       <ul class="nav navbar-nav">
+        <% if can? :create, Project %>
+            <li><%= link_to 'Add Project', new_project_path %></li>
+        <% end %>
       </ul>
+
 
       <ul class="nav navbar-nav pull-right">
         <li class="dropdown">
@@ -23,6 +30,8 @@
             Role
             <span class="caret"></span>
           </a>
+
+
           <ul class="dropdown-menu" role="menu">
             <% User::ROLES.each do |k, v| %>
                 <li>
